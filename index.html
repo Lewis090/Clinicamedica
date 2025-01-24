@@ -1,56 +1,28 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agendamento de Consultas</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 50px;
-        }
-        table {
-            margin-top: 20px;
-            border-collapse: collapse;
-            width: 80%;
-        }
-        table, th, td {
-            border: 1px solid black;
-        }
-        th, td {
-            padding: 10px;
-            text-align: left;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Agendamento de Consultas</h1>
-    <form id="agendamento-form">
-        <label for="paciente">Nome do Paciente:</label>
-        <input type="text" id="paciente" required>
-        <label for ="consulta">Consulta:</label>
-        <input type="text" id="consulta" required>
-        <label for="data">Data:</label>
-        <input type="date" id="data" required>
-        <label for="hora">Hora:</label>
-        <input type="time" id="hora" required>
-        <button type="submit">Agendar</button>
+    <h1>Agendamento de Consultas Médicas</h1>
+    <form id="appointmentForm">
+        <label for="plano">Plano</labe>
+        <input type="text" id="plano" name="plano" required>
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="consulta">Consulta</labe>
+        <input type="text" id="consulta" name="consulta" required>
+        <label for="date">Data:</label>
+        <input type="date" id="date" name="date" required>
+        <label for="time">Hora:</label>
+        <input type="time" id="time" name="time" required>
+        <button type="submit">Agendar Consulta</button>
     </form>
-    <table>
-        <thead>
-            <tr>
-                <th>Nome do Paciente</th>
-                <th>Especialidade</th>
-                <th>Data</th>
-                <th>Hora</th>
-            </tr>
-        </thead>
-        <tbody id="agendamentos"></tbody>
-    </table>
-    <script src="script.js">
-    </script>
+    <h2>Consultas Agendadas</h2>
+    <ul id="appointmentList"></ul>
+    <script src="script.js"></script>
 </body>
 </html>
